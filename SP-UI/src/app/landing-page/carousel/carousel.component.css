@@ -16,15 +16,18 @@ p {
 }
 
 .carousel-inner .bg__first {
-    background-image: url(../../../assets/images/lap1.png);
+    background-image: url(../../../assets/images/Banner7.jpg);
+    background-position: bottom 25% center;
 }
 
 .carousel-inner .bg__second {
-    background-image: url(../../../assets/images/pc1.png);
+    background-image: url(../../../assets/images/Banner2.jpg);
+    background-position: bottom center;
 }
 
 .carousel-inner .bg__third {
-    background-image: url(../../../assets/images/pc2.png);
+    background-image: url(../../../assets/images/Banner4.jpg);
+    background-position: bottom center;
 }
 
 .carousel-caption {

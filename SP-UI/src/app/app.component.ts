@@ -13,6 +13,7 @@ export class AppComponent {
 
   constructor (public securityService: SecurityService) { }
 
+  currentYear: number = new Date().getFullYear()
   searchBoxVariable = false
 
   showSearchBox(){

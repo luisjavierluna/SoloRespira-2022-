@@ -15,7 +15,7 @@ JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
 
 builder.Services.AddAutoMapper(typeof(Program));
 
-builder.Services.AddTransient<IFileStorage, LocalFileStorage>();
+builder.Services.AddTransient<IFileStorage, AzureFileStorage>();
 
 builder.Services.AddHttpContextAccessor();
 

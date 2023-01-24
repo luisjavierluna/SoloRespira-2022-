@@ -1,0 +1,109 @@
+<header class="site-header">
+    <div class="site-header__leader">
+        <div class="site-header__container">
+            <div class="site-header__row">
+                <div class="column">
+                    
+                    <div class="site-header__login">
+                        <app-authorized>
+                            <ng-container authorized >
+                                <div class="logged-in">
+                                    <a class="login__data login__data-email">
+                                        {{securityService.getFieldJWT('email')}}
+                                    </a>
+                                    <a class="login__data" (click)="securityService.logout()">
+                                        Logout
+                                    </a>
+                                </div>
+                            </ng-container>
+
+                            <ng-container unAuthorized>
+                                <a class="login__data" routerLink="/login">
+                                    Login
+                                </a>
+                                <a class="login__icon" routerLink="/login">
+                                    <i class="fa-solid fa-user"></i>
+                                </a>
+                            </ng-container>
+                        </app-authorized>
+                    </div>
+
+                    <div class="site-header__logo">
+                        <a href="index.html" title="The Mall">
+                            <span>Infinite</span>
+                        </a>
+                    </div>
+                    <div class="site-header__search">
+                        <a class="site-search-btn" (click)="showSearchBox()">
+                            <span class="site-search-btn__label">Search</span>
+                            <span class="site-search-btn__icon icon-search" [class.hide__icon-search]="searchBoxVariable"><i class="fa-solid fa-magnifying-glass"></i></span>
+                            <span class="site-search-btn__icon icon-close" [class.show__icon-close]="searchBoxVariable"><i class="fa-solid fa-xmark"></i></span>
+                        </a>
+
+                        <div class="site-header__search--box" [class.show__search--box]="searchBoxVariable">
+                            <app-search-box (OnSubmit)="showSearchBox()"></app-search-box>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="site-header__menu">
+        <app-navbar-menus></app-navbar-menus>
+    </nav>
+    
+</header>
+
+<div class="home-content">
+    
+    <router-outlet></router-outlet>
+    
+</div>
+
+<footer class="site-footer">
+    <div class="site-footer__header" >
+        <div class="footer-lines"></div>
+        <div class="site-header__logo">
+            <a href="#" title="The Mall">
+                <span>Infinite</span>
+            </a>
+        </div>
+        <div class="footer-lines"></div>
+    </div>
+
+    <div class="site-footer__content">
+        <div class="first-footer-section">
+            <div class="footer-section__social">
+                <h5>Follow Us</h5>
+                <div class="footer-social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+    
+            <div class="footer-section__newsletter">
+                <h5>Receive our Newsletter</h5>
+                <div class="footer-app__input">
+                    <input type="text" placeholder="Email Address">
+                    <a href="#" class="btn btn-dark">Sign Up</a>
+                </div>
+            </div>
+
+            <div class="footer-section__app">
+                <h5>Download the App</h5>
+                <div class="footer-app__images">
+                    <img src="assets/images/badge_ios@2x.png" alt="There should be a picture here">
+                    <img src="assets/images/badge_android@2x.png" alt="There should be a picture here">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="site-footer__disclaimer">
+        <p>© 2022 Infinite. All rights reserved.</p>
+    </div>
+
+</footer>

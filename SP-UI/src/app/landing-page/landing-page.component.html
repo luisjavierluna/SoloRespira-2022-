@@ -1,0 +1,115 @@
+<div class="site">
+    <div class="site-content">
+        <div class="site-sections">
+            
+            <nav class="site-sections__menu">
+                <div class="site-sections__side">
+                    <app-authorized [role]="'admin'">
+                        <ng-container authorized>
+                            <button class="btn btn-outline-light" routerLink="/management-dashboard">Manage</button>
+                        </ng-container>
+                    </app-authorized>
+                </div>
+
+                <ul>
+                    <li><a href="#">Offers</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Memberships</a></li>
+                </ul>
+
+                <div class="site-sections__side">
+
+                </div>
+            </nav>
+            
+            <div class="site-sections__block" >
+                <app-carousel></app-carousel>
+            </div>
+
+            <div class="site-sections__block">
+                <div class="second-section">
+                    <div class="second-section__image">
+                        <img src="assets/images/consoles1.png" class="img-fluid" alt="There should be a picture here">
+                    </div>
+                    <div class="second-section__text">
+                        <div>
+                            <span>Gaming Hall</span>
+                            <h1>Redefining Gaming</h1>
+                            <p>More than 200 of the most covetable gaming brands work with us ready for you to discover.</p>
+                            <a href="#" class="btn btn-outline-dark">Explore More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="site-sections__block">
+                <div class="third-section">
+                    <div class="third-section__text">
+                        <h1>Discover Amazing Universes</h1>
+                        <p>
+                            With our straming service play new titles the same day they are released. Plus, 
+                            play hundreds of high-quality games with your friends on console, PC, or the cloud. 
+                            We're constantly adding new games, so there's always something new to enjoy.
+                        </p>
+                        <a href="#" class="btn btn-outline-light">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="site-sections__block">
+                <div class="fourth-section">
+                    
+                    <div class="fourth-section__content">
+                        <div class="fourth-section__content_one">
+                            <img src="assets/images/fornite1.png" class="img-fluid" alt="There should be a picture here">
+                            <div class="fourth-section__text">
+                                <span>Fortnite</span>
+                                <div class="fourth-section__buttons">
+                                    <a href="#" class="btn btn-outline-light">Explore More</a>
+                                    <a href="#" class="btn btn-outline-light">Discover Events</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="fourth-section__content">
+                        <div class="fourth-section__content_two">
+                            <img src="assets/images/halo1.png" class="img-fluid" alt="There should be a picture here">
+                            <div class="fourth-section__text">
+                                <span>Halo</span>
+                                <h1>New season</h1>
+                                <div class="fourth-section__buttons">
+                                    <a href="#" class="btn btn-outline-light">Explore More</a>
+                                    <a href="#" class="btn btn-outline-light">Discover Events</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="site-sections__block">
+                <div class="fifth-section">
+                    <div class="fifth-section__text">
+                        <p>Discover Events & Offers</p>
+                    </div>
+                    <div class="fifth-section__buttons">
+                        <a href="#" class="btn btn-outline-dark">Discover Events</a>
+                        <a href="#" class="btn btn-outline-dark">Discover Offers</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="site-sections__block">
+                <div class="sixth-section">
+                    <div class="sixth-section__text">
+                        <h1>What's New at Infinite</h1>
+                        <a href="#" class="btn btn-outline-light">Discover More</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

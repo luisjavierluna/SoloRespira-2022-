@@ -1,0 +1,13 @@
+button {
+    margin-right: 5px;
+}
+
+a {
+    text-transform: none;
+}
+
+.form-group span {
+    text-transform: none;
+    color:  #CC2936;
+    font-weight: bold;
+}

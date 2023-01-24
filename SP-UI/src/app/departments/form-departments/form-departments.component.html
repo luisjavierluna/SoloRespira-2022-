@@ -1,0 +1,20 @@
+<app-show-errors [errors]="errors"></app-show-errors>
+
+<form [formGroup]="form" (submit)="saveChanges()">
+    <div class="form-group mb-3">
+        <label class="form-label" for="">Name</label>
+        <input class="form-control" [ngModel]="departmentToEditParam.name" 
+        type="text" formControlName="name" placeholder="Write the department name here...">
+        <span>{{getNameErrorMessage()}}</span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label class="form-label" for="">Description</label>
+        <textarea class="form-control" [ngModel]="departmentToEditParam.description" 
+        type="text" formControlName="description" placeholder="Write the department description here..."></textarea>
+        <span>{{getNameErrorMessage()}}</span>
+    </div>
+
+    <button class="btn btn-primary" [disabled]="form.invalid">Send</button>
+    <a class="btn btn-secondary" routerLink="/departments">Return</a>
+</form>

@@ -1,0 +1,26 @@
+<div class="search">
+    
+    <div class="container">
+        <form class="container search__box--input mb-3" [formGroup]="form" (submit)="startSearch()">
+            <input type="text" [ngModel]="searchInput" formControlName="name" placeholder="Search Infinite">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        
+            <button hidden>Send</button>
+        </form>
+
+        
+    
+        <div class="search__results" *ngIf="searchLength !== ''">
+            <ul>
+                <li *ngFor="let product of products" 
+                (click)="searchSuggestion(product.name)">
+                    {{product.name}}
+                </li>
+            </ul>
+        </div>        
+    </div>
+        
+    <div class="advaced-search">
+        <a routerLink="/search" (click)="startAdvancedSearch()">Advanced Search</a>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="content" >
+    <div *ngFor="let category of headerMenuCategoriesParam; let i = index">
+        <div class="row">
+            <header>{{category.name}}</header>
+            <ul class="mega-links" *ngFor="let product of category.products">
+                <li><a routerLink="/product/page/{{product.name}}">{{product.name}}</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

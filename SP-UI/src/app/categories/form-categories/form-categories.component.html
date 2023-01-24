@@ -1,0 +1,26 @@
+<app-show-errors [errors]="errors"></app-show-errors>
+
+<form [formGroup]="form" (submit)="saveChanges()">
+    <div class="form-group mb-3">
+        <label class="form-label">Name</label>
+        <input class="form-control" [ngModel]="categoryToEditParam.name" 
+        type="text" formControlName="name" placeholder="Write the category name here...">
+        <span>{{getNameErrorMessage()}}</span>
+    </div>
+
+    <app-input-img [urlCurrentImage]="categoryToEditParam.image" (selectedFile)="selectedFile($event)"></app-input-img>
+
+    <div class="form-group mb-3">
+        <label class="form-label">Department</label>
+        <select class="form-select" formControlName="departmentId" 
+        [ngModel]="categoryToEditParam.departmentId">
+            <option *ngFor="let department of departmentsSelectListOptions" [value]="department.id">
+                {{department.name}}
+            </option>
+        </select>
+        <span>{{getDepartmentErrorMessage()}}</span>
+    </div>
+
+    <button class="btn btn-primary" [disabled]="form.invalid">Send</button>
+    <a class="btn btn-secondary" routerLink="/categories">Return</a>
+</form>

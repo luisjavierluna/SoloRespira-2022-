@@ -1,0 +1,46 @@
+<div class="container">
+  <app-authorized [role]="'admin'">
+    <ng-container authorized>
+      <h3 class="mb-4">Categories</h3>
+
+      <a class="btn btn-primary" routerLink="/categories/create">Create Category</a>
+
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Category</th>
+            <th scope="col">Image</th>
+            <th scope="col">Department</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr *ngFor="let category of categories; let i = index">
+            <td scope="row">{{i + 1}}</td>
+            <td>{{category.name}}</td>
+            <td><img [src]="category.image" alt="Image not found"></td>
+            <td>{{category.departmentName}}</td>
+            <td>
+              <div class="actions">
+                <a class="btn btn-primary" routerLink="/categories/edit/{{category.id}}">Edit</a>
+                <a class="btn btn-danger" [swal]="{title: 'Please confirm', 
+                  text: 'Are you sure you want to delete this Category?', showCancelButton: true}"
+                  (confirm)="delete(category.id)">Delete</a>
+              </div>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+      <a class="btn btn-dark" routerLink="/management-dashboard">Return</a>
+
+      <div class="loading">
+        <div class="spinner-grow" role="status" *ngIf="categories.length <= 0"></div>
+      </div>
+    </ng-container>
+  </app-authorized>
+
+</div>

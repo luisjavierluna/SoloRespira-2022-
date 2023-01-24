@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <h3 class="card-title text-center">Sign In</h3>
+
+            <app-show-errors [errors]="errors"></app-show-errors>
+
+            <form [formGroup]="form" (submit)="signIn()">
+                <div class="form-group">
+                    <div class="form-email">
+                        <label class="form-label" for="">Email</label>
+                        <input formControlName="email" class="form-control" type="text" placeholder="Write your email">
+                        <span>{{getEmailErrorMessage()}}</span>
+                    </div>
+
+                    <div class="form-password">
+                        <label class="form-label" for="">Password</label>
+                        <input formControlName="password" class="form-control" type="password" placeholder="Write your password">
+                        <span>{{getPasswordErrorMessage()}}</span>
+                    </div>
+
+                </div>
+
+                <div class="form-submit">
+                    <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Sign In</button>
+                    <a routerLink="/login">Do you have already an account? Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>

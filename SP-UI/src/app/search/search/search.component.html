@@ -1,0 +1,46 @@
+<div class="search">
+    <div class="container">
+        <form class=" mb-3" [formGroup]="form">
+            <div class="container search__box--input">
+                <input type="text" formControlName="name" placeholder="Search Infinite">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <div class="search__box--filters">
+                
+                <select [ngModel]="departmentIdInputParam" formControlName="departmentId" (change)="getFilteredCategories()" >
+                    <option value="" disabled selected>-- Select Department --</option>
+                    <option value="0">All Departments</option>
+                    <option *ngFor="let department of departments" [value]="department.id">{{department.name}}</option>
+                </select>
+
+                <select [ngModel]="categoryIdInputParam" formControlName="categoryId">
+                    <option value="" disabled selected>-- Select Category --</option>
+                    <option value="0">All Categories</option>
+                    <option *ngFor="let category of categories" [value]="category.id">{{category.name}}</option>
+                </select>
+            </div>
+        
+            <button hidden>Send</button>
+        </form>
+    </div>
+    
+    <div class="search__results" >
+        <ul class="card__list">
+            <li class="card" *ngFor="let product of products">
+                <a routerLink="/product/page/{{product.name}}">
+                    <div class="card__image">
+                        <img [src]="product.image" alt="There should be an image here">
+                    </div>
+                    <div class="card__texts">
+                        <p>Department: {{product.departmentName}}</p>
+                        <p>Category: {{product.categoryName}}</p>
+                        <p>{{product.name}}</p>
+                        <p class="card__texts--price" *ngIf="product.price > product.priceWithDiscount">{{product.price | currency}}</p>
+                        <p class="card__texts--discount">{{product.priceWithDiscount | currency}}</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>    
+</div>

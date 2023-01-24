@@ -1,0 +1,153 @@
+.search {
+    background-color: white;
+    min-height: 20rem;
+    padding-bottom: 5rem;
+}
+
+.search__box--input {
+    display: flex;
+    border-bottom: 1px solid black;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.search__box--input > input {
+    width: 100%;
+    height: 2rem;
+    border: none;
+    padding: 0px;
+    outline: none;
+}
+
+.search__box--filters {
+    display: flex;
+}
+
+.search__box--filters select {
+    margin: 0px 5px;
+    background-color: white;
+    border: 1px solid black;
+    padding: 5px 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.search__box--filters select:hover {
+    background-color: rgb(247, 247, 247);
+    transition: all 0.3s ease-in-out;
+}
+
+.search__results > ul {
+    padding: 0px 5rem;
+}
+
+.search__results > ul > li {
+    text-transform: none;
+    list-style: none;
+    font-weight: 600;
+    line-height: 2;
+}
+
+.card__list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+}
+
+.card {
+    background-color: rgb(252, 252, 252);
+    width: 218px;
+    height: fit-content;
+}
+
+.card a {
+    text-decoration: none;
+    color: black;
+}
+
+.card__image {
+    width: 215px;
+    height: 222px;
+    background-color: rgb(238, 238, 238);
+    border-bottom: 1px solid rgb(219, 219, 219);
+    margin-bottom: 2rem;
+}
+
+.card__image img {
+    width: 100%;
+    height: 100%;
+    font-size: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.card__texts {
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 2rem;
+    padding-left: 8px;
+}
+
+.card__texts p {
+    margin-bottom: 0px;
+}
+
+.card__texts--price {
+    color: gray;
+    text-decoration: line-through;
+}
+
+.card__texts--discount {
+    color: red;
+}
+
+@media (max-width: 1200px) {
+    .card__list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .card__list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .card__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .search__results > ul {
+        padding: 0px 2rem;
+    }
+
+    .card__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card {
+        width: fit-content;
+    }
+
+    .card__image {
+        width: auto;
+        height: auto;
+        margin-bottom: 2rem;
+    }
+
+    .search__box--filters {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .search__box--filters select {
+        margin-bottom: 1rem;
+    }
+
+}

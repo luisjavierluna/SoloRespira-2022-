@@ -1,0 +1,105 @@
+h1 {
+    font-size: 3.5rem;
+}
+
+p {
+    text-transform: none;
+    font-size: 1rem;
+}
+
+.carousel-item {
+    position: relative;
+    height: 428px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.carousel-inner .bg__first {
+    background-image: url(../../../assets/images/lap1.png);
+}
+
+.carousel-inner .bg__second {
+    background-image: url(../../../assets/images/pc1.png);
+}
+
+.carousel-inner .bg__third {
+    background-image: url(../../../assets/images/pc2.png);
+}
+
+.carousel-caption {
+    width: 84%;
+    left: 8%;
+    top: 15%;
+}
+
+.carousel-caption h1 {
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid white;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.carousel-caption p {
+    padding-top: 1rem;
+    display:  flex;
+    width: 50%;
+    text-align: left;
+}
+
+.carousel-caption a {
+    display: block;
+    width: 150px;
+    font-size: 10px;
+    padding: 12px 32px;
+    border-radius: 0px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 8%;
+}
+
+@media (min-width: 1200px) {
+    /*  */
+}
+
+@media (max-width: 1200px) {
+    .carousel-caption h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .carousel-caption h1 {
+        font-size: 2.5rem;
+    }
+
+    .carousel-caption p {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-caption p {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-caption {
+        top: 0%;
+    }
+    
+    .carousel-caption h1 {
+        font-size: 1.8rem;
+    }
+
+    .carousel-caption a {
+        display: block;
+        width: 100%;
+        padding: 8px 0px;
+        border-radius: 0px;
+    }
+}

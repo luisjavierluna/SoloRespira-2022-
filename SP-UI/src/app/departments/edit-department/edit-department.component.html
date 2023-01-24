@@ -1,0 +1,8 @@
+<div class="container">
+    <h3 class="mb-4">Edit Department</h3>
+
+    <app-form-departments
+    [errors]="errors"
+    [departmentToEditParam]="departmentToEdit"
+    (onSubmit)="saveChanges($event)"></app-form-departments>
+</div>

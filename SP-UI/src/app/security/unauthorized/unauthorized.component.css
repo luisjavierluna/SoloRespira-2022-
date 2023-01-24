@@ -1,0 +1,12 @@
+.container {
+    height: 50vh;
+}
+
+header {
+    margin-top: 7rem;
+}
+
+header > div {
+    display: flex;
+    justify-content: center;
+}

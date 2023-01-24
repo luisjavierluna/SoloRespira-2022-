@@ -1,0 +1,267 @@
+.page-block {
+    
+}
+
+.page-row {
+    height: 50px;
+    background-color: #f5f5f5;
+}
+
+.product {
+    height: fit-content;
+    padding: 1rem;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+}
+
+.product-block {
+    display: grid;
+    grid-template-columns: 7.5fr 2.5fr;
+    column-gap: 1rem;
+    padding: 0;
+    min-height: 800px;
+}
+
+.product__section--main {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    column-gap: 1rem;
+}
+
+.images {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.images__carousel--list {
+    width: 65px;
+    height: 100%;
+    margin-right: 30px;
+}
+
+.images__carousel--list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.images__carousel--list ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 2px;
+    margin-bottom: 8px;
+}
+
+.images__carousel--list ul li img {
+    width: 50px;
+}
+
+.images__main--image {
+    width: 78%;
+    min-width: 308px;
+    height: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: start;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.images__main--image img {
+    width: 100%;
+}
+
+.description {
+    width: 100%;
+    height: 100%;
+    min-width: 274px;
+    padding: 1rem;
+}
+
+.product-description p,
+.product-description h3,
+.product-description div {
+    text-transform: none;
+}
+
+.product-description p,
+.product-description div {
+    font-size: 14px;
+}
+
+.product-description a {
+    color: #212529;
+}
+
+.product-description a:hover {
+    color: #3d454d;
+}
+
+.product-description__price {
+    display: flex;
+    justify-content: left;
+    gap: 1rem;
+}
+
+.price__original {
+    color: #3d454d;
+    text-decoration: line-through;
+}
+
+.price__discount {
+    color: red;
+}
+
+.product-description button {
+    background-color: #212529;
+    color: white;
+    border-radius: 5%;
+    outline: none;
+    border: none;
+    cursor: default;
+    padding: 6px 12px;
+}
+
+.product-description button,
+.product-description select {
+    margin-bottom: 1rem;
+}
+
+.product__section--aside {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.product__section--aside p,
+.product__section--aside a {
+    text-transform: none;
+}
+
+.product-info {
+    height: 100%;
+}
+
+.product-edd {
+    padding: 1rem;
+    background-color: #f5f5f5;
+    height: fit-content;
+    margin-bottom: 2rem;
+}
+
+.product-edd a {
+    color: #4e4e4e;
+}
+
+.product-edd a:hover {
+    color: #686868;
+}
+
+.product-edd p:first-child {
+    font-weight: bold;
+}
+
+.buy-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.buy-now {
+    background-color: #212529;
+    color: white;
+    border: 1px solid #212529;
+    text-decoration: none;
+    border-radius: 3px;
+    cursor: default;
+    padding: 8px 12px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.buy-now:hover {
+    background-color: white;
+    color: #212529;
+    border: 1px solid #212529;
+}
+
+.add-car {
+    background-color: white;
+    color: #212529;
+    border: 1px solid #212529;
+    text-decoration: none;
+    border-radius: 3px;
+    cursor: default;
+    padding: 8px 12px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.add-car:hover {
+    color: #484b50;
+}
+
+@media (max-width: 992px) {
+    .product-block {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .product-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .buy-section {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .product__section--main {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .product {
+        padding: 0;
+    }
+
+    .images {
+        height: 420px;
+    }
+
+    .images__carousel--list {
+        width: 50px;
+        margin: 0;
+    }
+
+    .images__carousel--list ul li img {
+        width: 40px;
+        margin-right: 10px;
+    }
+    
+    .images__main--image {
+        min-width: 230px;
+    }
+
+    .buy-section {
+        width: 100%;
+    }
+}
+
+@media (max-width: 340px) {
+    .images {
+        height: 300px;
+    }
+
+    .images__carousel--list {
+        overflow-y: scroll;
+    }
+}

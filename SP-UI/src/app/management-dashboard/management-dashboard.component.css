@@ -1,0 +1,12 @@
+.container {
+    margin-top: 7rem;
+}
+
+a {
+    font-size: .8rem;
+}
+
+a:hover {
+    background-color: white;
+    color: black;
+}

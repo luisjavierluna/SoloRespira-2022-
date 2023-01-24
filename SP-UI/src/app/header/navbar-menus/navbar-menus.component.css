@@ -1,0 +1,246 @@
+a {
+    color: black;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.nav-menu-items {
+    height:  100%;
+    width: 100%;
+}
+
+.navbar-links {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.navbar-links > i {
+    display: none;
+}
+
+.navbar-links-ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    margin-bottom: 0;
+}
+
+.navbar-links-ul-li {
+    list-style: none;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    line-height: 35px;
+    border-bottom: black
+}
+
+.navbar-links-ul-li a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.navbar-links-ul-li a i {
+    margin-left: 0.4rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-links-ul-li:hover a i {
+    transform: rotate(180deg);
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-links-ul-li:hover a {
+    color: rgb(82, 82, 82);
+    border-bottom: 1px solid black;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Megamenu features */
+.mega-box {
+    position: absolute;
+    top: 95px;
+    width: 100%;
+    height: 50vh;
+    left: 0;
+
+
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.navbar-links li:hover .mega-box {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease;
+}
+
+.accordion {
+    display: none;
+}
+
+
+@media (max-width: 1200px) {
+    .navbar-links-ul {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar-links-ul {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-links {
+        position: relative;
+        height: 38px;
+        width: 40vh;
+        justify-content: left;
+    }
+
+    .navbar-links:hover {
+        border-bottom: 1px solid black;
+    }
+    
+    .navbar-links-ul {
+        position: absolute;
+        flex-direction: column;
+        display: block;
+        background-color: white;
+        top: 39px;
+        align-items: flex-start;
+        height: 100vh;
+        width: 40vh;
+
+
+        left: -810px;
+        transition: all 0.3s ease; 
+    }
+
+    .navbar-links-ul-li {
+        width: 100%;
+    }
+
+    .navbar-links:hover i,
+    .navbar-links:hover .navbar-links-ul {
+        left: 0px;
+        transition: all 0.3s ease;
+    }
+
+    .navbar-links i {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        cursor: pointer;
+        font-size: 1rem;
+        margin-left: 1rem;
+    }
+
+    .navbar-links:hover i{
+        color: rgb(133, 133, 133);
+    }
+
+    .mega-box {
+        position: absolute;
+        top: 0px;
+        left: 243px;
+        width: 60vh;
+        height: 100vh;
+
+
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .navbar-links-ul-li:hover .mega-box {
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.3s ease-in-out;
+    }
+
+}
+
+@media (max-width: 576px) {
+    
+    .navbar-links {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .navbar-links i {
+        margin-left: 0px;
+    }
+
+    .navbar-links-ul {
+        display: none;
+        padding: 0%;
+    }
+
+    .show-navbar-links-ul {
+        display: block;
+        align-items: center;
+        width: 100%;
+        overflow-y: auto;
+        padding-bottom: 7rem;
+        left: 0px;
+    }
+    
+    .show-navbar-links-ul > li > a {
+        display: flex;
+        justify-content: center;
+    }
+
+    .mega-box {
+        display: none;
+    }
+
+    .navbar-links-ul-li {
+        display: none;
+    }
+
+    .accordion {
+        display: flex;
+    }
+
+    .accordion-item {
+        width: 100%;
+    }
+
+    .accordion-header {
+        border-bottom: 1px solid black;
+    }
+
+    .accordion-button {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        font-size: 14px;
+    }
+    
+    .accordion-button::after {
+        display: none;
+        margin: 0px 0px 0px 5px;
+    }
+
+    .accordion-button:not(.collapsed) {
+        background-color: rgb(252, 252, 252);
+        color: black;
+    }
+
+    .accordion-button:focus {
+        border-color: rgb(174, 174, 174);
+        box-shadow: 0 0 0 .25rem rgba(192, 192, 192, 0.25);
+      }
+}

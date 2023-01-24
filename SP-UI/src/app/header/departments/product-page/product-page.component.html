@@ -1,0 +1,96 @@
+<div class="page-block">
+
+    <!-- <app-show-errors [errors]="errors"></app-show-errors> -->
+
+    <div class="page-row"></div>
+
+    <div class="product">
+        <div class="container-fluid product-block">
+            <section class="product__section--main">
+                <div class="images">
+                    <div class="images__carousel--list">
+                        <ul>
+                            <li><img src="https://ss628.liverpool.com.mx/xl/1116069896.jpg" alt=""></li>
+                            <li><img src="https://ss628.liverpool.com.mx/xl/1116069896.jpg" alt=""></li>
+                            <li><img src="https://ss628.liverpool.com.mx/xl/1116069896.jpg" alt=""></li>
+                            <li><img src="https://ss628.liverpool.com.mx/xl/1116069896.jpg" alt=""></li>
+                            <li><img src="https://ss628.liverpool.com.mx/xl/1116069896.jpg" alt=""></li>
+                            <li><img src="https://ss628.liverpool.com.mx/xl/1116069896.jpg" alt=""></li>
+                        </ul>
+                    </div>
+
+                    <div class="images__main--image">
+                        <img [src]="productPage.image" alt="">
+                    </div>
+                </div>
+
+                <div class="description">
+
+                    <div class="product-description">
+                        <h3>{{productPage.name}} 15.6 inches Full HD Nvidia GeForce GTX 1650 Ti Intel Core i5 8 GB RAM 1 TB HDD 256 GB SSD</h3>
+                        <p>Product Code: {{productPage.id}}</p>
+                        <div>
+                            <!-- <img src="" alt=""> -->
+                            <div><a href="">Check store availability</a> </div>
+                        </div>
+    
+                        <hr>
+    
+                        <div class="product-description__price">
+                            <p class="price__original" *ngIf="productPage.price > productPage.priceWithDiscount">{{productPage.price | currency}}</p>
+                            <p class="price__discount">{{productPage.priceWithDiscount | currency}}</p>
+                        </div>
+    
+                        <div><a href="#">See more promotions</a></div>
+    
+                        <div>
+                            <!-- <img src="" alt=""> -->
+                            <p>Free shipping nationwide</p>
+                        </div>
+    
+                        <div>
+                            <p>Quantity</p>
+                            <select class="form-select" name="" id="">
+                                <option value="" disabled selected>-- Select one option --</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+    
+                        <div>
+                            <p>Size:</p>
+                            <button>15.6 inches</button>
+                        </div>
+    
+                        <div>
+                            <p>Description:</p>
+                            <p>
+                                {{productPage.description}}
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="product__section--aside">
+                <div class="product-info">
+                    <div class="product-edd">
+                        <p>Receive at home</p>
+                        <p><a href="">Enter your zip code</a> to know if this product can arrive today</p>
+                    </div>
+                    <div class="buy-section">
+                        <a class="buy-now" href="">Buy now</a>
+                        <a class="add-car" href="">Add to cart</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="page-row"></div>
+
+</div>

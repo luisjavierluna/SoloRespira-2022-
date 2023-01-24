@@ -1,0 +1,9 @@
+<div class="container">
+    <h3 class="mb-4">Edit Product</h3>
+
+    <app-form-products
+    *ngIf="productToEdit"
+    [errors]="errors"
+    [productToEditParam]="productToEdit"
+    (OnSubmit)="saveChanges($event)"></app-form-products>
+</div>

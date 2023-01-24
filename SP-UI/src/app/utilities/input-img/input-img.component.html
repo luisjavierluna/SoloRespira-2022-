@@ -1,0 +1,15 @@
+<div>
+    <button class="btn btn-outline-dark mb-3" type="button" (click)="fileInput.click()">
+        Select Image
+    </button>
+    <input class="mb-3" type="file" hidden #fileInput (change)="change($event)">
+</div>
+
+<div class="mb-3">
+    <div *ngIf="imageBase64">
+        <img [src]="imageBase64" alt="Subarea Image">
+    </div>
+    <div *ngIf="urlCurrentImage">
+        <img [src]="urlCurrentImage" alt="Subarea Image">
+    </div>
+</div>

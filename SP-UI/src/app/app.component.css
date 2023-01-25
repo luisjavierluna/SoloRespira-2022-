@@ -147,7 +147,10 @@ app-navbar-menus {
 
 .site-footer__header .site-header__logo{
     margin: 0px 2rem;
-    width: 336px;
+}
+
+.site-footer__header .site-header__logo a span {
+    white-space: nowrap;
 }
 
 .footer-lines {
@@ -357,7 +360,7 @@ app-search-box {
 
 @media (max-width: 576px) {
     .site-header__logo a span {
-        font-size: 1rem;
+        font-size: 1.8rem;
     }
 
     .site-search-btn__label {

@@ -16,17 +16,17 @@ p {
 }
 
 .carousel-inner .bg__first {
-    background-image: url(../../../assets/images/Banner7.jpg);
+    background-image: url(../../../assets/images/Banner7_2.webp);
     background-position: bottom 25% center;
 }
 
 .carousel-inner .bg__second {
-    background-image: url(../../../assets/images/Banner2.jpg);
+    background-image: url(../../../assets/images/Banner2_2.webp);
     background-position: bottom center;
 }
 
 .carousel-inner .bg__third {
-    background-image: url(../../../assets/images/Banner4.jpg);
+    background-image: url(../../../assets/images/Banner4_2.webp);
     background-position: bottom center;
 }
 

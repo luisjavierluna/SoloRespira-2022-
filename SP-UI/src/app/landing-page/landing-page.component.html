@@ -56,12 +56,12 @@
                     
                     <div class="fourth-section__content">
                         <div class="fourth-section__content_one">
-                            <img loading="lazy" src="assets/images/Banner8_2.webp" class="img-fluid" alt="There should be a picture here">
+                            <img loading="lazy" [src]="randomProductA.image" class="img-fluid" alt="There should be a picture here">
                             <div class="fourth-section__text">
-                                <span>Bolita</span>
+                                <!-- <span>{{randomProductA.name}}</span> -->
+                                <h1>{{randomProductA.name}}</h1>
                                 <div class="fourth-section__buttons">
-                                    <a href="#" class="btn btn-outline-light">Explore More</a>
-                                    <a href="#" class="btn btn-outline-light">Discover Events</a>
+                                    <a routerLink="/product/page/{{randomProductA.name}}" class="btn btn-outline-light">Ver más</a>
                                 </div>
                             </div>
                         </div>
@@ -69,13 +69,12 @@
     
                     <div class="fourth-section__content">
                         <div class="fourth-section__content_two">
-                            <img loading="lazy" src="assets/images/Banner9_2.webp" class="img-fluid" alt="There should be a picture here">
+                            <img loading="lazy" [src]="randomProductB.image" class="img-fluid" alt="There should be a picture here">
                             <div class="fourth-section__text">
-                                <span>Torre de Pisa</span>
-                                <h1>New season</h1>
+                                <!-- <span>{{randomProductB.name}}</span> -->
+                                <h1>{{randomProductB.name}}</h1>
                                 <div class="fourth-section__buttons">
-                                    <a href="#" class="btn btn-outline-light">Explore More</a>
-                                    <a href="#" class="btn btn-outline-light">Discover Events</a>
+                                    <a routerLink="/product/page/{{randomProductB.name}}" class="btn btn-outline-light">Ver más</a>
                                 </div>
                             </div>
                         </div>
@@ -105,7 +104,7 @@
             <div class="site-sections__block">
                 <div class="sixth-section">
                     <div class="sixth-section__text">
-                        <h1>¿Qué será lo nuevo en Sólo respira?</h1>
+                        <h1>¿Qué sigue en Sólo respira?</h1>
                         <!-- <a href="#" class="btn btn-outline-light">Discover More</a> -->
                     </div>
                 </div>

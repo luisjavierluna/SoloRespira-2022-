@@ -47,6 +47,26 @@
         <textarea formControlName="description" [ngModel]="productToEditParam.description" type="text"class="form-control" placeholder="Write the product description here..."></textarea>
     </div>
 
+    <div class="form-group mb-3">
+        <label class="form-label">Height</label>
+        <input formControlName="height" [ngModel]="productToEditParam.height" type="text"class="form-control" placeholder="Write the product height here...">
+    </div>
+
+    <div class="form-group mb-3">
+        <label class="form-label">Length</label>
+        <input formControlName="length" [ngModel]="productToEditParam.length" type="text"class="form-control" placeholder="Write the product length here...">
+    </div>
+
+    <div class="form-group mb-3">
+        <label class="form-label">Weight</label>
+        <input formControlName="weight" [ngModel]="productToEditParam.weight" type="text"class="form-control" placeholder="Write the product weight here...">
+    </div>
+
+    <div class="form-group mb-3">
+        <label class="form-label">Width</label>
+        <input formControlName="width" [ngModel]="productToEditParam.width" type="text"class="form-control" placeholder="Write the product width here...">
+    </div>
+
     <button class="btn btn-primary" [disabled]="form.invalid">Send</button>
     <a class="btn btn-secondary" routerLink="/products">Return</a>
 </form>

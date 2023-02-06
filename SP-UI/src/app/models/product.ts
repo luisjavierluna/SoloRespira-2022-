@@ -6,6 +6,10 @@ export interface Product {
     discount: number
     priceWithDiscount: number
     description: string
+    weight: number
+    height: number
+    width: number
+    length: number
     categoryId: number
     categoryName: string
     departmentId: number
@@ -43,4 +47,8 @@ export interface ProductCreationDTO {
     price: number
     discount: number
     description: string
+    weight: number
+    height: number
+    width: number
+    length: number
 }

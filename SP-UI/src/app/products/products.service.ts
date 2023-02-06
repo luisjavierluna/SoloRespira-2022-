@@ -54,6 +54,11 @@ export class ProductsService {
     formData.append('discount', product.discount.toString())
     formData.append('description', product.description)
 
+    formData.append('weight', product.weight.toString())
+    formData.append('height', product.height.toString())
+    formData.append('width', product.width.toString())
+    formData.append('length', product.length.toString())
+
     return formData
   }
 }

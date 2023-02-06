@@ -27,6 +27,10 @@ export class FormProductsComponent implements OnInit {
     discount: 0,
     priceWithDiscount: 0,
     description: '',
+    weight: 0,
+    height: 0,
+    width: 0,
+    length: 0,
     categoryId: 0,
     categoryName: '',
     departmentId: 0,
@@ -57,7 +61,11 @@ export class FormProductsComponent implements OnInit {
       image: '',
       price: '',
       discount: '',
-      description: ''
+      description: '',
+      weight: '',
+      height: '',
+      width: '',
+      length: '',
     })
   }
 

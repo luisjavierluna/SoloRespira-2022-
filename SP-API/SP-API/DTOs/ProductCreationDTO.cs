@@ -12,6 +12,10 @@ namespace Mall_API.DTOs
         [Range(0, 1)]
         public decimal Discount { get; set; }
         public string Description { get; set; }
+        public int Weight { get; set; }
+        public decimal Height { get; set; }
+        public decimal Width { get; set; }
+        public decimal Length { get; set; }
         [Required]
         [Range(1, int.MaxValue, ErrorMessage = "You must select a {0} from the list")]
         [Display(Name = "Category")]

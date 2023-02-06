@@ -19,6 +19,13 @@ export interface PageProduct {
     price: number
     discount: number
     priceWithDiscount: number
+
+    weight: number
+    height: number
+    width: number
+    length: number
+
+
     description: string
     categoryId: number
     categoryName: string

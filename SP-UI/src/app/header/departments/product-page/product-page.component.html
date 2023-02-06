@@ -27,7 +27,14 @@
                 <div class="description">
 
                     <div class="product-description">
-                        <h3>{{productPage.name}} 104gr, 5.5cm x 6cm x 6cm</h3>
+
+                        <h3>
+                            {{productPage.name}} |
+                            {{productPage.weight}}gr,
+                            {{productPage.height}}cm x
+                            {{productPage.width}}cm x
+                            {{productPage.length}}cm
+                        </h3>
                         <!-- <p>Product Code: {{productPage.id}}</p> -->
                         <!-- <div>
                             <img src="" alt="">
@@ -49,8 +56,12 @@
                         </div>
 
                         <div>
-                            <p>Tamaño:</p>
-                            <button>15.6 inches</button>
+                            <p>Tamaño (cm):</p>
+                            <button>
+                                {{productPage.height}}H,
+                                {{productPage.width}}W,
+                                {{productPage.length}}L
+                            </button>
                         </div>
 
                         <div>

@@ -2,7 +2,7 @@
     <div *ngFor="let category of headerMenuCategoriesParam; let i = index">
         <div class="row">
             <header>{{category.name}}</header>
-            <ul class="mega-links" *ngFor="let product of category.products">
+            <ul class="mega-links" *ngFor="let product of category.products.slice(0,4)">
                 <li><a routerLink="/product/page/{{product.name}}">{{product.name}}</a></li>
             </ul>
         </div>

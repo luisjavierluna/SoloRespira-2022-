@@ -85,6 +85,8 @@
 
 .second-section__text div h1 {
     text-align: center;
+    font-family: 'Romain BP Headline Regular',serif;
+    text-transform: none;
 }
 
 .second-section__text div p {
@@ -103,7 +105,9 @@
 
 .third-section {
     position: relative;
-    background-image: url(../../assets/images/Banner1_2.webp);
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(../../assets/images/Banner1_2.webp);
     height: 428px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -194,15 +198,25 @@
 }
 
 .fifth-section div {
-    margin: 1rem;
+    margin: 8px;
 }
 
 .fifth-section__text p {
     text-align: center;
     font-size: 30px;
     font-family: 'Romain BP Headline Regular',serif;
-    text-transform: capitalize;
+    text-transform: none;
     margin: 0px;
+}
+
+
+.fifth-section__icons a i {
+    font-size: 50px;
+    color: #212529;
+}
+
+.fifth-section__icons a i:hover {
+    color: #545d68;
 }
 
 .fifth-section__buttons {

@@ -4,7 +4,7 @@ h1 {
 
 p {
     text-transform: none;
-    font-size: 1rem;
+    font-size: 20px;
 }
 
 .carousel-item {
@@ -16,12 +16,16 @@ p {
 }
 
 .carousel-inner .bg__first {
-    background-image: url(../../../assets/images/Banner7_2.webp);
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)),
+        url(../../../assets/images/Banner7_2.webp);
     background-position: bottom 25% center;
 }
 
 .carousel-inner .bg__second {
-    background-image: url(../../../assets/images/Banner2_2.webp);
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)),
+    url(../../../assets/images/Banner2_2.webp);
     background-position: bottom center;
 }
 
@@ -42,6 +46,8 @@ p {
     border-bottom: 1px solid white;
     padding-bottom: 1rem;
     margin-bottom: 1rem;
+    font-family: 'Romain BP Headline Regular',serif;
+    text-transform: none;
 }
 
 .carousel-caption p {
@@ -57,6 +63,21 @@ p {
     font-size: 10px;
     padding: 12px 32px;
     border-radius: 0px;
+}
+
+.instagram-icon a {
+    padding-left: 0;
+    width: fit-content;
+}
+
+.instagram-icon a i {
+    font-size: 45px;
+    color: white;
+    padding-left: 0;
+}
+
+.instagram-icon a i:hover {
+    color: rgb(221, 221, 221);
 }
 
 .carousel-control-prev,

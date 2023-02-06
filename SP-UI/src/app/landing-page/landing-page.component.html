@@ -2,25 +2,19 @@
     <div class="site-content">
         <div class="site-sections">
             
-            <nav class="site-sections__menu">
-                <div class="site-sections__side">
-                    <app-authorized [role]="'admin'">
-                        <ng-container authorized>
+            <app-authorized [role]="'admin'">
+                <ng-container authorized>
+                    <nav class="site-sections__menu">
+                        <div class="site-sections__side">
                             <button class="btn btn-outline-light" routerLink="/management-dashboard">Manage</button>
-                        </ng-container>
-                    </app-authorized>
-                </div>
-
-                <ul>
-                    <li><a href="#">Offers</a></li>
-                    <li><a href="#">Events</a></li>
-                    <li><a href="#">Memberships</a></li>
-                </ul>
-
-                <div class="site-sections__side">
-
-                </div>
-            </nav>
+                        </div>
+            
+                        <div class="site-sections__side">
+            
+                        </div>
+                    </nav>
+                </ng-container>
+            </app-authorized>
             
             <div class="site-sections__block" >
                 <app-carousel></app-carousel>
@@ -33,17 +27,17 @@
                     </div>
                     <div class="second-section__text">
                         <div>
-                            <span>Candle Hall</span>
-                            <h1>Redefining Candles</h1>
-                            <p>More than 200 of the most covetable candles work with us ready for you to discover.</p>
-                            <a href="#" class="btn btn-outline-dark">Explore More</a>
+                            <span>Tu espacio</span>
+                            <h1>Redefine tus espacios</h1>
+                            <p>Más de 60 modelos de velas aromáticas que puedes usar para decorar tus espacios que, sin la necesidad de encenderlas ya dan un sutil y agradable aroma.</p>
+                            <a routerLink="/search" class="btn btn-outline-dark">Descubre más</a>
                         </div>
                     </div>
                 </div>
             </div>
             
             
-            <div class="site-sections__block">
+            <!-- <div class="site-sections__block">
                 <div class="third-section">
                     <div class="third-section__text">
                         <h1>Discover Amazing Figures</h1>
@@ -55,7 +49,7 @@
                         <a href="#" class="btn btn-outline-light">Learn More</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <div class="site-sections__block">
                 <div class="fourth-section">
@@ -92,20 +86,27 @@
             <div class="site-sections__block">
                 <div class="fifth-section">
                     <div class="fifth-section__text">
-                        <p>Discover Events & Offers</p>
+                        <p>Siguenos en Instagram</p>
                     </div>
-                    <div class="fifth-section__buttons">
+                    
+                    <div class="fifth-section__icons">
+                        <a href="https://www.instagram.com/solorespira.mx/" target="_blank">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                    </div>
+
+                    <!-- <div class="fifth-section__buttons">
                         <a href="#" class="btn btn-outline-dark">Discover Events</a>
                         <a href="#" class="btn btn-outline-dark">Discover Offers</a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
             <div class="site-sections__block">
                 <div class="sixth-section">
                     <div class="sixth-section__text">
-                        <h1>What's New at Solo Respira</h1>
-                        <a href="#" class="btn btn-outline-light">Discover More</a>
+                        <h1>¿Qué será lo nuevo en Sólo respira?</h1>
+                        <!-- <a href="#" class="btn btn-outline-light">Discover More</a> -->
                     </div>
                 </div>
             </div>

@@ -28,11 +28,11 @@
 
                     <div class="product-description">
                         <h3>{{productPage.name}} 104gr, 5.5cm x 6cm x 6cm</h3>
-                        <p>Product Code: {{productPage.id}}</p>
-                        <div>
-                            <!-- <img src="" alt=""> -->
+                        <!-- <p>Product Code: {{productPage.id}}</p> -->
+                        <!-- <div>
+                            <img src="" alt="">
                             <div><a href="">Check store availability</a> </div>
-                        </div>
+                        </div> -->
     
                         <hr>
     
@@ -41,36 +41,32 @@
                             <p class="price__discount">{{productPage.priceWithDiscount | currency}}</p>
                         </div>
     
-                        <div><a href="#">See more promotions</a></div>
-    
                         <div>
-                            <!-- <img src="" alt=""> -->
-                            <p>Free shipping nationwide</p>
-                        </div>
-    
-                        <div>
-                            <p>Quantity</p>
-                            <select class="form-select" name="" id="">
-                                <option value="" disabled selected>-- Select one option --</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
-    
-                        <div>
-                            <p>Size:</p>
-                            <button>15.6 inches</button>
-                        </div>
-    
-                        <div>
-                            <p>Description:</p>
+                            <p>Descripción:</p>
                             <p>
                                 {{productPage.description}}
                             </p>
                         </div>
+
+                        <div>
+                            <p>Tamaño:</p>
+                            <button>15.6 inches</button>
+                        </div>
+
+                        <div>
+                            <a href="#">Confirma tu pago</a>
+                            <p>puede ser con tu deposito o transferencia bancaria.</p>
+                        </div>
+
+                        <div>
+                            <a href="#">Confirma disponibilidad</a>
+
+                            <p>
+                                Valida con nosotros si las piezas que te gustaría adquirir se 
+                                encuentran disponibles o si se fabricarán especialmente para ti 
+                            </p>
+                        </div>
+    
                     </div>
 
                 </div>
@@ -79,13 +75,31 @@
             <section class="product__section--aside">
                 <div class="product-info">
                     <div class="product-edd">
-                        <p>Receive at home</p>
-                        <p><a href="">Enter your zip code</a> to know if this product can arrive today</p>
+                        <p>Recibe en tu casa</p>
+                        <p>
+                            Confirma tu Pedido y te haremos llegar el total de tu compra*, 
+                            recuerda que tenemos envíos nacionales desde $150 o gratis en 
+                            la compra de $899. Obtén un 10% en la compra de más de 3 
+                            modelos distintos.
+                        </p>
+
+                        <p>
+                            Haz llegar la información de envío: Nombre, Dirección: Calle, 
+                            Número, Colonia, C.P., Ciudad, Estado.
+                        </p>
+
+                        <p>
+                            Tu pedido será enviado en un plazo de 3 días hábiles laborales* 
+                            y el envío será de 3 a 5 días hábiles dependiendo de la zona de envío
+                        </p>
+
+                        <p>*Precios no incluyen IVA</p>
+                        <p>*Dependiendo de la temporada y existencias</p>
                     </div>
-                    <div class="buy-section">
+                    <!-- <div class="buy-section">
                         <a class="buy-now" href="">Buy now</a>
                         <a class="add-car" href="">Add to cart</a>
-                    </div>
+                    </div> -->
                 </div>
             </section>
         </div>

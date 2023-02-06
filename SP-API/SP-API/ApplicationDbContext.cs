@@ -65,6 +65,15 @@ namespace Mall_API
                 product.Property(p => p.Description)
                 .IsRequired();
 
+                product.Property(p => p.Height)
+                .HasPrecision(3,1);
+
+                product.Property(p => p.Width)
+                .HasPrecision(3,1);
+
+                product.Property(p => p.Length)
+                .HasPrecision(3,1);
+
                 product.HasOne(p => p.Category)
                 .WithMany(c => c.Products)
                 .HasForeignKey(p => p.CategoryId)

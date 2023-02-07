@@ -341,12 +341,15 @@
         top: 5%;
     }
 
-    .fourth-section__text h1 {
-        display: none;
+    .fourth-section__text {
+        width: 93%;
+        display: flex;
+        justify-content: center;
     }
 
     .fourth-section__buttons {
         display: flex;
         flex-direction: column;
+        width: 100%;
     }
 }

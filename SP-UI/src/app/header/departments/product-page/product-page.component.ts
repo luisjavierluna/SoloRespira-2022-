@@ -32,7 +32,12 @@ export class ProductPageComponent implements OnInit {
     departmentName: ''
   }
 
+
   ngOnInit(): void {
+
+    window.scrollTo(0, 1)
+    
+
     this.activatedRoute.params.subscribe(params => {
       this.productsService.getByPageName(params['name'])
       .subscribe({
@@ -42,6 +47,6 @@ export class ProductPageComponent implements OnInit {
         error: error => {console.log(error)}
       })
     })
-  }
 
+  }
 }

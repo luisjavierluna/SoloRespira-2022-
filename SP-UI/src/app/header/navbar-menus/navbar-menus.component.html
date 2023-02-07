@@ -9,7 +9,7 @@
                     <i class="fa-solid fa-caret-down"></i>
                 </a>
                 <div class="mega-box">
-                    <app-navbar-megamenus [headerMenuCategoriesParam]="department.categories"></app-navbar-megamenus>
+                    <app-navbar-megamenus [headerMenuCategoriesParam]="department.categories" ></app-navbar-megamenus>
                 </div>
             </li>
 
@@ -22,7 +22,7 @@
                     </div>
                     <div id="{{department.name}}" class="accordion-collapse collapse" [attr.aria-labelledby]="department.id">
                         <div class="accordion-body">
-                            <app-navbar-megamenus [headerMenuCategoriesParam]="department.categories"></app-navbar-megamenus>
+                            <app-navbar-megamenus (OnSubmit)="showNavbarLinksUl()" [headerMenuCategoriesParam]="department.categories"></app-navbar-megamenus>
                         </div>
                     </div>
                 </div>

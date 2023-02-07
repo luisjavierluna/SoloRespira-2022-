@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MenuCategory } from 'src/app/models/category';
 
 @Component({
@@ -10,10 +10,17 @@ export class NavbarMegamenusComponent implements OnInit {
 
   constructor() { }
 
+  @Output()
+  OnSubmit: EventEmitter<void> = new EventEmitter<void>()
+
   @Input()
   headerMenuCategoriesParam: MenuCategory[] = []
 
   ngOnInit(): void {
+  }
+
+  hideNavbarLinks() {
+    this.OnSubmit.emit()
   }
 
 }

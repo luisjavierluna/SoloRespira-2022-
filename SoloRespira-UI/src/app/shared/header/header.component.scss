@@ -1,0 +1,134 @@
+@import '../../../styles.scss';
+
+.section-header {
+    // background-color: aliceblue;
+    height: 20rem;
+    border-bottom: 1px solid lighten($gray, 5) ;
+    
+    .header {
+        // background-color: antiquewhite;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 2rem 5rem;
+        justify-content: center;
+
+        & > * {
+            margin: 0 3rem;
+        }
+
+        .header__heading {
+            width: 22rem;
+            height: 11.5rem;
+            padding: 7.5px;
+            // background-color: lighten($red, 10);
+
+            .logo {
+                font-family: $logo_font;
+                color: $black;
+                font-size: 9rem;
+                line-height: 5rem;
+            }
+
+            .header__logo-left {
+                float: left;
+            }
+
+            .header__logo-right {
+                float: right;
+            }
+        }
+
+        .header__inline-menu {
+            ul {
+                // background-color: lighten($red, 10);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0;
+                margin-bottom: 0;
+
+                li {
+                    margin: 0rem 1rem;
+                    list-style: none;
+                    display: flex;
+
+                    .header__inline-link {
+                        font-size: 2rem;
+                        font-family: $main_font;
+                        margin: 0;
+                        color: $darkGray;
+                        white-space: nowrap;
+                        border-bottom: 0px solid $white;
+                        transition: .3s ease-in-out;
+                    }
+
+                    i {
+                        font-size: 1.2rem;
+                        margin: 0 5px;
+                        display: flex;
+                        align-self: center;
+                        transition: .3s ease-in-out;
+                    }
+                    
+                    &:hover {
+                        cursor: pointer;
+                        
+                        .header__inline-link {
+                            color: black;
+                            border-bottom: 1px solid $black;
+                            transition: .3s ease-in-out;
+                        }
+
+                        i {
+                            color: black;
+                            rotate: (180deg);
+                            transition: .3s ease-in-out;
+                        }
+                    }
+                }
+            }
+        }
+
+        .header__icons {
+            // background-color: lighten($red, 10);
+            width: 12rem;
+            height: 3rem;
+            display: flex;
+            position: relative;
+
+            .header__icon {
+                width: 3rem;
+                height: 3rem;
+
+                &:nth-child(1) {
+                    position: absolute;
+                    left: 1rem;
+                }
+    
+                &:nth-child(2) {
+                    position: absolute;
+                    left: 5rem;
+                }
+
+                &:nth-child(3) {
+                    position: absolute;
+                    left: 9rem;
+                }
+
+                a {
+                    color: $darkGray;
+    
+                    i {
+                        font-size: 2rem;
+    
+                        &:hover {
+                            font-size: 2.2rem;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

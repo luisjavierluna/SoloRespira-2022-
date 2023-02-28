@@ -39,54 +39,61 @@
             }
         }
 
-        .header__inline-menu {
-            ul {
-                // background-color: lighten($red, 10);
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 0;
-                margin-bottom: 0;
-
-                li {
-                    margin: 0rem 1rem;
-                    list-style: none;
+        .header__menu {
+            // background-color: lighten($red, 10);
+            .header__inline-menu {
+                ul {
+                    // background-color: lighten($red, 10);
                     display: flex;
-
-                    .header__inline-link {
-                        font-size: 2rem;
-                        font-family: $main_font;
-                        margin: 0;
-                        color: $darkGray;
-                        white-space: nowrap;
-                        border-bottom: 0px solid $white;
-                        transition: .3s ease-in-out;
-                    }
-
-                    i {
-                        font-size: 1.2rem;
-                        margin: 0 5px;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0;
+                    margin-bottom: 0;
+    
+                    li {
+                        margin: 0rem 1rem;
+                        list-style: none;
                         display: flex;
-                        align-self: center;
-                        transition: .3s ease-in-out;
-                    }
-                    
-                    &:hover {
-                        cursor: pointer;
-                        
+    
                         .header__inline-link {
-                            color: black;
-                            border-bottom: 1px solid $black;
+                            font-size: 2rem;
+                            font-family: $main_font;
+                            margin: 0;
+                            color: $darkGray;
+                            white-space: nowrap;
+                            border-bottom: 0px solid $white;
                             transition: .3s ease-in-out;
                         }
-
+    
                         i {
-                            color: black;
-                            rotate: (180deg);
+                            font-size: 1.2rem;
+                            margin: 0 5px;
+                            display: flex;
+                            align-self: center;
                             transition: .3s ease-in-out;
+                        }
+                        
+                        &:hover {
+                            cursor: pointer;
+                            
+                            .header__inline-link {
+                                color: black;
+                                border-bottom: 1px solid $black;
+                                transition: .3s ease-in-out;
+                            }
+    
+                            i {
+                                color: black;
+                                rotate: (180deg);
+                                transition: .3s ease-in-out;
+                            }
                         }
                     }
                 }
+            }
+
+            .header__menu-icon {
+                display: none;
             }
         }
 
@@ -128,7 +135,46 @@
                     }
                 }
             }
+        }
 
+        @include tablet {
+            position: relative;
+
+
+            .header__heading {
+                order: 1;
+            }
+
+            .header__menu {
+                position: absolute;
+                left: 0;
+
+                .header__inline-menu {
+                    order: 0;
+                    display: none;
+                }
+
+                .header__menu-icon {
+                    display: flex;
+
+                    a {
+                        color: $black;
+                        i {
+                            font-size: 3rem;
+    
+                            &:hover {
+                                font-size: 3.3rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .header__icons {
+                position: absolute;
+                right: 0;
+                order: 2;
+            }
         }
     }
 }

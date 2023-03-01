@@ -34,13 +34,13 @@ $tablet: 992px;
 $desktop: 1200px;
 
 // Mixins
-@mixin cellphone {
+@mixin cellphoneSmall {
     @media (max-width: #{$cellphoneSmall}) {
         @content;
     }
 }
 
-@mixin cellphoneSmall {
+@mixin cellphone {
     @media (max-width: #{$cellphone}) {
         @content;
     }

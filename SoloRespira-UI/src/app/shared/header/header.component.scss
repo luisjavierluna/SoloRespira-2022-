@@ -3,7 +3,7 @@
 .section-header {
     // background-color: aliceblue;
     height: 20rem;
-    border-bottom: 1px solid lighten($gray, 5);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
     
     @include cellphone{
         height: fit-content;
@@ -134,7 +134,7 @@
                         font-size: 2rem;
     
                         &:hover {
-                            font-size: 2.2rem;
+                            font-size: 2rem * $hovergrowthfactor;
                         }
                     }
                 }
@@ -169,7 +169,7 @@
                             font-size: 3rem;
     
                             &:hover {
-                                font-size: 3.3rem;
+                                font-size: 3rem * $hovergrowthfactor;
                             }
                         }
                     }
@@ -184,7 +184,7 @@
         }
 
         @include cellphone {
-            background-color: palegoldenrod;
+            // background-color: palegoldenrod;
             flex-direction: column;
             position: unset;
             height: fit-content;
@@ -201,17 +201,28 @@
             }
 
             .header__menu {
+                // background-color: lighten($red, 10);
                 order: 1;
 
                 .header__menu-icon {
-                    height: fit-content;
+                    height: 7rem;
+                    width: 7rem;
                     a {
+                        height: 100%;
+                        width: 100%;
+                        position: relative;
+
                         i {
-                            font-size: 7rem;
+                            font-size: 5rem;
+                            position: absolute;
+                            top: -3px;
+                            left: 10px;
 
                             &:hover {
-                                color: lighten($black, 20);
-                                font-size: 7rem;
+                                top: -7px;
+                                left: 8px;
+
+                                font-size: 5rem * $hovergrowthfactor;
                             }
                         }
                     }
@@ -219,13 +230,20 @@
             }
 
             .header__icons {
-                background-color: lighten($red, 10);
-                width: 30rem;
-                height: 5rem;
+                // background-color: lighten($red, 10);
+                width: 22rem;
+                height: 4.5rem;
+                display: flex;
+                justify-content: space-between;
+                margin: 0;
+                padding: 0 1rem;
                 
                 .header__icon {
                     display: flex;
                     justify-content: center;
+                    height: 4.5rem;
+                    width: 4.5rem;
+                    // background-color: aquamarine;
                     
                     &:nth-child(1),
                     &:nth-child(2),
@@ -234,8 +252,22 @@
                     }
 
                     a {
+                        // background-color: khaki;
+                        height: 100%;
+                        width: 100%;
+                        position: relative;
+
                         i {
-                            font-size: 5rem;
+                            font-size: 3rem;
+                            position: absolute;
+                            top: 0px;
+                            left: 8px;
+
+                            &:hover {
+                                font-size: 3rem * $hovergrowthfactor;
+                                top: -2px;
+                                left: 6px;
+                            }
                         }
                     }
                 }

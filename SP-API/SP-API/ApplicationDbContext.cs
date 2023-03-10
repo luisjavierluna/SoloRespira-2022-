@@ -12,6 +12,10 @@ namespace Mall_API
 
         public ApplicationDbContext(DbContextOptions options) : base(options) { }
 
+        public ApplicationDbContext()
+        {
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Department>(department =>

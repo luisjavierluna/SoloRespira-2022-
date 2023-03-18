@@ -1,7 +1,6 @@
 @import '../../../styles.scss';
 
 .section-header {
-    // background-color: aliceblue;
     height: 20rem;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
     
@@ -10,7 +9,6 @@
     }
     
     .header {
-        // background-color: antiquewhite;
         height: 100%;
         display: flex;
         align-items: center;
@@ -25,7 +23,6 @@
             width: 22rem;
             height: 11.5rem;
             padding: 7.5px;
-            // background-color: lighten($red, 10);
 
             .logo {
                 font-family: $logo_font;
@@ -44,10 +41,8 @@
         }
 
         .header__menu {
-            // background-color: lighten($red, 10);
             .header__inline-menu {
                 ul {
-                    // background-color: lighten($red, 10);
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -102,13 +97,14 @@
         }
 
         .header__icons {
-            // background-color: lighten($red, 10);
+            background-color: pink;
             width: 12rem;
             height: 3rem;
             display: flex;
             position: relative;
 
             .header__icon {
+                background-color: khaki;
                 width: 3rem;
                 height: 3rem;
 
@@ -128,10 +124,14 @@
                 }
 
                 a {
+                    background-color: aquamarine;
                     color: $darkGray;
-    
+                    position: relative;
+
                     i {
+                        // background-color: khaki;
                         font-size: 2rem;
+                        position: absolute;
     
                         &:hover {
                             font-size: 2rem * $hovergrowthfactor;
@@ -165,11 +165,15 @@
 
                     a {
                         color: $black;
+                        position: relative;
                         i {
                             font-size: 3rem;
+                            position: absolute;
     
                             &:hover {
                                 font-size: 3rem * $hovergrowthfactor;
+                                top: -3px;
+                                left: -1px;
                             }
                         }
                     }
@@ -180,11 +184,37 @@
                 position: absolute;
                 right: 0;
                 order: 2;
+                display: flex;
+                justify-content: space-between;
+
+                .header__icon {
+                    &:nth-child(1),
+                    &:nth-child(2),
+                    &:nth-child(3) {
+                        position: unset;
+                    }
+
+                    a {
+                        position: relative;
+                        display: flex;
+                        height: 100%;
+                        width: 100%;
+
+                        i {
+                            position: absolute;
+                            left: 5px;
+
+                            &:hover {
+                                top: -1px;
+                                left: 4px;
+                            }
+                        }
+                    }
+                }
             }
         }
 
         @include cellphone {
-            // background-color: palegoldenrod;
             flex-direction: column;
             position: unset;
             height: fit-content;
@@ -201,7 +231,6 @@
             }
 
             .header__menu {
-                // background-color: lighten($red, 10);
                 order: 1;
 
                 .header__menu-icon {
@@ -230,7 +259,6 @@
             }
 
             .header__icons {
-                // background-color: lighten($red, 10);
                 width: 22rem;
                 height: 4.5rem;
                 display: flex;
@@ -243,7 +271,6 @@
                     justify-content: center;
                     height: 4.5rem;
                     width: 4.5rem;
-                    // background-color: aquamarine;
                     
                     &:nth-child(1),
                     &:nth-child(2),
@@ -252,7 +279,6 @@
                     }
 
                     a {
-                        // background-color: khaki;
                         height: 100%;
                         width: 100%;
                         position: relative;

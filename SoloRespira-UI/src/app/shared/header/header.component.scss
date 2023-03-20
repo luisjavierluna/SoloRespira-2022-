@@ -19,6 +19,22 @@
             margin: 0 3rem;
         }
 
+        app-header-logo,
+        app-header-menu,
+        app-header-icons {
+            background-color: lighten($red, 30);
+        }
+
+        app-header-logo {
+            width: 22rem;
+            height: 10rem;
+        }
+
+        app-header-icons {
+            width: 12rem;
+            height: 3rem;
+        }
+
         @include tablet {
             position: relative;
             height: fit-content;

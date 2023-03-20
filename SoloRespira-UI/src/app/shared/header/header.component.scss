@@ -22,7 +22,7 @@
         app-header-logo,
         app-header-menu,
         app-header-icons {
-            background-color: lighten($red, 30);
+            background-color: lighten($red, 30); ////////////////////7
         }
 
         app-header-logo {
@@ -37,7 +37,6 @@
 
         @include tablet {
             position: relative;
-            height: fit-content;
         }
 
         @include cellphone {

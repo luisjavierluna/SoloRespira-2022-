@@ -55,72 +55,13 @@
         display: none;
     }
 
-
     @include tablet {
-        .header__menu {
-            position: absolute;
-            left: 0;
-            height: fit-content;
-
-            .header__inline-menu {
-                order: 0;
-                display: none;
-            }
-
-            .header__menu-icon {
-                display: flex;
-                height: 4rem;
-
-                a {
-                    color: $black;
-                    position: relative;
-                    i {
-                        font-size: 3rem;
-                        position: absolute;
-
-                        &:hover {
-                            font-size: 3rem * $hovergrowthfactor;
-                            top: -3px;
-                            left: -1px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    @include cellphone {
-        .header__menu {
-            margin-bottom: 3rem;
-            position: unset;
+        .header__inline-menu {
+            display: none;
         }
 
-        .header__menu {
-            order: 1;
-
-            .header__menu-icon {
-                height: 7rem;
-                width: 7rem;
-                a {
-                    height: 100%;
-                    width: 100%;
-                    position: relative;
-
-                    i {
-                        font-size: 5rem;
-                        position: absolute;
-                        top: -3px;
-                        left: 10px;
-
-                        &:hover {
-                            top: -7px;
-                            left: 8px;
-
-                            font-size: 5rem * $hovergrowthfactor;
-                        }
-                    }
-                }
-            }
+        .header__menu-icon {
+            display: flex;
         }
     }
 }

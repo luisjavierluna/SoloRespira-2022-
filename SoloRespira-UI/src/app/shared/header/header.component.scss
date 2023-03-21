@@ -11,12 +11,12 @@
     .header {
         height: 100%;
         display: flex;
+        justify-content: space-between;
         align-items: center;
         padding: 2rem 5rem;
-        justify-content: center;
 
         & > * {
-            margin: 0 3rem;
+            margin: 0 1rem;
         }
 
         app-header-logo,
@@ -30,13 +30,28 @@
             height: 10rem;
         }
 
+        app-header-menu {
+            min-height: 3rem;
+            width: fit-content;
+        }
+
         app-header-icons {
             width: 12rem;
             height: 3rem;
         }
 
         @include tablet {
-            position: relative;
+            app-header-logo {
+                order: 1;
+            }
+    
+            app-header-menu {
+                order: 0;
+            }
+
+            app-header-icons {
+                order: 2;
+            }
         }
 
         @include cellphone {

@@ -1,6 +1,10 @@
 @import '../../../../styles.scss';
 
 .header__menu {
+    background-color: khaki;
+    height: 3rem;
+    width: fit-content;
+
     .header__inline-menu {
         ul {
             display: flex;
@@ -53,15 +57,43 @@
 
     .header__menu-icon {
         display: none;
+        visibility: hidden;
+        opacity: 0;
     }
 
     @include tablet {
+        height: 5rem;
+        width: 5rem;
+        
         .header__inline-menu {
             display: none;
         }
 
         .header__menu-icon {
+            background-color: aquamarine;
             display: flex;
+            visibility: visible;
+            opacity: 1;
+            height: 100%;
+            width: 100%;
+
+            a {
+                background-color: khaki;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                i {
+                    background-color: palevioletred;
+                    font-size: 3rem;
+
+                    &:hover {
+                        font-size: 3rem * $hovergrowthfactor;
+                    }
+                }
+            }
         }
     }
 }

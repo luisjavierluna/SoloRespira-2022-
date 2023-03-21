@@ -1,15 +1,14 @@
 @import '../../../../styles.scss';
 
 .header__menu {
-    background-color: khaki;
     height: 3rem;
     width: fit-content;
+    display: flex;
+    align-items: center;
 
     .header__inline-menu {
         ul {
             display: flex;
-            justify-content: center;
-            align-items: center;
             padding: 0;
             margin-bottom: 0;
 
@@ -21,8 +20,6 @@
                 .header__inline-link {
                     font-size: 2rem;
                     font-family: $main_font;
-                    margin: 0;
-                    color: $darkGray;
                     white-space: nowrap;
                     border-bottom: 0px solid $white;
                     transition: .3s ease-in-out;
@@ -31,7 +28,6 @@
                 i {
                     font-size: 1.2rem;
                     margin: 0 5px;
-                    display: flex;
                     align-self: center;
                     transition: .3s ease-in-out;
                 }
@@ -57,8 +53,6 @@
 
     .header__menu-icon {
         display: none;
-        visibility: hidden;
-        opacity: 0;
     }
 
     @include tablet {
@@ -70,15 +64,11 @@
         }
 
         .header__menu-icon {
-            background-color: aquamarine;
             display: flex;
-            visibility: visible;
-            opacity: 1;
             height: 100%;
             width: 100%;
 
             a {
-                background-color: khaki;
                 height: 100%;
                 width: 100%;
                 display: flex;
@@ -86,7 +76,6 @@
                 align-items: center;
 
                 i {
-                    background-color: palevioletred;
                     font-size: 3rem;
 
                     &:hover {

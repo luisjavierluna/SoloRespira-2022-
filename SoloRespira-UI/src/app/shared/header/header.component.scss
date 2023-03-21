@@ -19,12 +19,6 @@
             margin: 0 1rem;
         }
 
-        app-header-logo,
-        app-header-menu,
-        app-header-icons {
-            background-color: lighten($red, 30); ////////////////////7
-        }
-
         app-header-logo {
             width: 22rem;
             height: 10rem;
@@ -66,6 +60,14 @@
             flex-direction: column;
             position: unset;
             height: fit-content;
+
+            app-header-logo,
+            app-header-menu,
+            app-header-icons {
+                position: unset;
+                order: inherit;
+                margin: 3rem 0;
+            }
         }
     }
 }

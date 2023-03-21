@@ -41,16 +41,24 @@
         }
 
         @include tablet {
+            position: relative;
+            display: flex;
+            justify-content: center;
+
             app-header-logo {
                 order: 1;
             }
-    
+            
             app-header-menu {
                 order: 0;
+                position: absolute;
+                left: 0px;
             }
 
             app-header-icons {
                 order: 2;
+                position: absolute;
+                right: 0px;
             }
         }
 

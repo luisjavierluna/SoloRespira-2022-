@@ -1,0 +1,88 @@
+@import '../../../../styles.scss';
+
+.header__menu {
+    height: 3rem;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+
+    .header__inline-menu {
+        ul {
+            display: flex;
+            padding: 0;
+            margin-bottom: 0;
+
+            li {
+                margin: 0rem 1rem;
+                list-style: none;
+                display: flex;
+
+                .header__inline-link {
+                    font-size: 2rem;
+                    font-family: $main_font;
+                    white-space: nowrap;
+                    border-bottom: 0px solid $white;
+                    transition: .3s ease-in-out;
+                }
+
+                i {
+                    font-size: 1.2rem;
+                    margin: 0 5px;
+                    align-self: center;
+                    transition: .3s ease-in-out;
+                }
+                
+                &:hover {
+                    cursor: pointer;
+                    
+                    .header__inline-link {
+                        color: black;
+                        border-bottom: 1px solid $black;
+                        transition: .3s ease-in-out;
+                    }
+
+                    i {
+                        color: black;
+                        rotate: (180deg);
+                        transition: .3s ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+
+    .header__menu-icon {
+        display: none;
+    }
+
+    @include tablet {
+        height: 5rem;
+        width: 5rem;
+        
+        .header__inline-menu {
+            display: none;
+        }
+
+        .header__menu-icon {
+            display: flex;
+            height: 100%;
+            width: 100%;
+
+            a {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                i {
+                    font-size: 3rem;
+
+                    &:hover {
+                        font-size: 3rem * $hovergrowthfactor;
+                    }
+                }
+            }
+        }
+    }
+}

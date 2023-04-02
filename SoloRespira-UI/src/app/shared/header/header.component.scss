@@ -1,0 +1,73 @@
+@import '../../../styles.scss';
+
+.section-header {
+    height: 20rem;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+    
+    @include cellphone{
+        height: fit-content;
+    }
+    
+    .header {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 5rem;
+
+        & > * {
+            margin: 0 1rem;
+        }
+
+        app-header-logo {
+            width: 22rem;
+            height: 10rem;
+        }
+
+        app-header-menu {
+            min-height: 3rem;
+            width: fit-content;
+        }
+
+        app-header-icons {
+            width: 12rem;
+            height: 3rem;
+        }
+
+        @include tablet {
+            position: relative;
+            display: flex;
+            justify-content: center;
+
+            app-header-logo {
+                order: 1;
+            }
+            
+            app-header-menu {
+                order: 0;
+                position: absolute;
+                left: 0px;
+            }
+
+            app-header-icons {
+                order: 2;
+                position: absolute;
+                right: 0px;
+            }
+        }
+
+        @include cellphone {
+            flex-direction: column;
+            position: unset;
+            height: fit-content;
+
+            app-header-logo,
+            app-header-menu,
+            app-header-icons {
+                position: unset;
+                order: inherit;
+                margin: 3rem 0;
+            }
+        }
+    }
+}

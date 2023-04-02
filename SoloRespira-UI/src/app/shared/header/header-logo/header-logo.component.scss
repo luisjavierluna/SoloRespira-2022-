@@ -1,0 +1,33 @@
+@import '../../../../styles.scss';
+
+.header__heading {
+    width: 22rem;
+    height: 11.5rem;
+    padding: 7.5px;
+
+    .logo {
+        font-family: $logo_font;
+        color: $black;
+        font-size: 9rem;
+        line-height: 5rem;
+    }
+
+    .header__logo-left {
+        float: left;
+    }
+
+    .header__logo-right {
+        float: right;
+    }
+}
+
+@include tablet {
+
+}
+
+@include cellphone {
+    .header__heading {
+        margin-bottom: 3rem;
+        position: unset;
+    }
+}
